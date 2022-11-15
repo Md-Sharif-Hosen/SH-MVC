@@ -1,0 +1,3 @@
+<?php
+exec("Php -S localhost:8000");
+?>
