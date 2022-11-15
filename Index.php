@@ -1,6 +1,8 @@
 <?php
 include_once("./vendor/autoload.php");
-$page_url = $_SERVER[ "REQUEST_URI"];
+include_once('./App/helper.php');
+include_once("./routes/web.php");
+
 
 // routing
 //---------------------
@@ -36,6 +38,8 @@ $page_url = $_SERVER[ "REQUEST_URI"];
 //     echo"dur hoo beta";
 // }
 
-dd($page_url);
+
+
+
 
 ?>
