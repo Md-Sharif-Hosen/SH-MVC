@@ -26,16 +26,16 @@ $page_url = $_SERVER[ "REQUEST_URI"];
 // else{
 //     echo"dur hoo beta";
 // }
-$page_view=__DIR__."/resource/views".$page_url.'.php';
+// $page_view=__DIR__."/resource/views".$page_url.'.php';
 
-if (file_exists($page_view))
-{
-    include($page_view);
-}
-else{
-    echo"dur hoo beta";
-}
+// if (file_exists($page_view))
+// {
+//     include($page_view);
+// }
+// else{
+//     echo"dur hoo beta";
+// }
 
-// dd($_SERVER,$page_url,__DIR__,file_exists(__DIR__."/about.php"));
+dd($page_url);
 
 ?>
