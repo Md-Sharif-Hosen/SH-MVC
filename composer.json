@@ -1,0 +1,17 @@
+{
+    "name": "sha/mvc",
+    "autoload": {
+        "psr-4": {
+            "Sha\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sharif-hosen",
+            "email": "mdsharifkhan762@gmail.com"
+        }
+    ],
+    "require": {
+        "larapack/dd": "^1.1"
+    }
+}
