@@ -37,9 +37,3 @@ include_once("./routes/web.php");
 // else{
 //     echo"dur hoo beta";
 // }
-
-
-
-
-
-?>
