@@ -8,10 +8,10 @@ $app->GET('/gallery',"WebsiteController@gallery");
 $app->GET('/blog',"WebsiteController@blog");
 
 $app->GET('/contact',"WebsiteController@contact");
-$app->POST('/contact/submit',"WebsiteController@contact_submit");
+$app->POST('/contact/submit',"ContactController@contact_submit");
 
 $app->GET('/login',"WebsiteController@login");
-$app->POST('/login/submit',"WebsiteController@login_submit");
+$app->POST('/login/submit',"ContactController@login_submit");
 
 $app->start();
 ?>

@@ -2,7 +2,7 @@
     "name": "sha/mvc",
     "autoload": {
         "psr-4": {
-            "Sha\\Mvc\\": "src/"
+            "App\\": "App/"
         }
     },
     "authors": [

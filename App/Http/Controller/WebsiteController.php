@@ -13,9 +13,6 @@ class WebsiteController{
     {
        return view('contact');
     }
-    public function contact_submit()
-    {
-        dd($_REQUEST);
-    }
+   
 }
 ?>
