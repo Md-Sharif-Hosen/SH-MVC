@@ -1,5 +1,5 @@
 <?php
-// namespace App\Http\Controller;
+namespace App\Http\Controller;
 class WebsiteController{
     public function home()
     {

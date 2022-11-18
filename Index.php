@@ -1,7 +1,14 @@
 <?php
-include_once("./vendor/autoload.php");
-include_once('./App/helper.php');
-include_once("./routes/web.php");
+// include_once("./vendor/autoload.php");
+// include_once('./App/helper.php');
+// include_once("./routes/web.php");
+
+// include("./App/Test.php");
+
+use function App\print_S;
+
+print_S();
+
 
 
 // routing
@@ -37,3 +44,4 @@ include_once("./routes/web.php");
 // else{
 //     echo"dur hoo beta";
 // }
+?>
