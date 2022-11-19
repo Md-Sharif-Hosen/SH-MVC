@@ -4,7 +4,7 @@ include_once("./routes/Route.php");
 $app= new Route();
 $app->GET('/',"WebsiteController@home");
 $app->GET('/about',"WebsiteController@about");
-$app->GET('/blog_details',"WebsiteController@blog_details")->params('id' ,'username','roll');
+$app->GET('/blog_details',"WebsiteController@blog_details")->params('id' ,'username');
 $app->GET('/gallery',"WebsiteController@gallery");
 $app->GET('/blog',"WebsiteController@blog");
 

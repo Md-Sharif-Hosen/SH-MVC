@@ -66,7 +66,7 @@ class Route
                 foreach ($target_route['params'] as $param){
                     if (!isset($_REQUEST[$param])){
                         echo "error page not found, $param parameter is missing.";
-                       dd($target_route,$_REQUEST);
+                    //    dd($target_route,$_REQUEST);
                         return 0;
                     }
                 }
@@ -74,8 +74,8 @@ class Route
             $controller = $target_route['controller'];
             $function = $target_route['function'];
             include_once(".\\App\\Http\\Controller\\$controller.php");
-            $controller = new WebsiteController();
-            $controller->$function();
+            $controller = new  WebsiteController();
+            $controller->$function(...array_values($_REQUEST));
 
     
         }

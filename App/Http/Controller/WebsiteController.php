@@ -13,10 +13,11 @@ class WebsiteController{
     {
        return view('contact');
     }
-    public function blog_details()
+    public function blog_details($id, $username)
     {
        echo "blog details";
-       dd($_REQUEST);
+    //    dd($_REQUEST);
+    dd($id , $username);
     }
     public function profile_details()
     {
