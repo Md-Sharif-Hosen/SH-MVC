@@ -1,6 +1,13 @@
 <?php
-namespace App;
- function print_S(){
-    echo "php test";
- }
+// namespace App;
+class  Test{
+    public function print_S()
+    {
+        echo "php a test <br>";
+     }
+}
+function print_P()
+    {
+        echo "php a test";
+     }
 ?>
