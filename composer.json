@@ -1,5 +1,5 @@
 {
-    "name": "sha/mvc",
+    "name": "sh/mvc",
     "autoload": {
         "psr-4": {
             "App\\": "App/"
@@ -7,7 +7,7 @@
     },
     "authors": [
         {
-            "name": "sharif-hosen",
+            "name": "md-sharif-hosen",
             "email": "mdsharifkhan762@gmail.com"
         }
     ],

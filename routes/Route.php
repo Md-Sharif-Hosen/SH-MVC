@@ -72,9 +72,10 @@ class Route
                 }
             }
             $controller = $target_route['controller'];
+            $controller = "\App\Http\Controller\\$controller";
             $function = $target_route['function'];
-            include_once(".\\App\\Http\\Controller\\$controller.php");
-            $controller = new  WebsiteController();
+
+            $controller = new $controller();
             $controller->$function(...array_values($_REQUEST));
 
     

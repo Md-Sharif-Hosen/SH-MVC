@@ -1,6 +1,9 @@
 <?php
+
 namespace App\Http\Controller;
-class WebsiteController{
+
+class WebsiteController
+{
     public function home()
     {
         return view('home');
@@ -11,20 +14,17 @@ class WebsiteController{
     }
     public function contact()
     {
-       return view('contact');
+        return view('contact');
     }
     public function blog_details($id, $username)
     {
-       echo "blog details";
-    //    dd($_REQUEST);
-    dd($id , $username);
+        echo "blog details";
+        //    dd($_REQUEST);
+        dd($id, $username);
     }
     public function profile_details()
     {
-       echo "profile details";
-       dd($_REQUEST);
+        echo "profile details";
+        dd($_REQUEST);
     }
-
-
 }
-?>
