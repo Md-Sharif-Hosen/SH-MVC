@@ -22,3 +22,7 @@ function asset($file_name)
     // dd($url,$file_name);
     return $url . "/Public/$file_name";
 }
+function globalvar($variable)
+{
+    return $GLOBALS[$variable];
+}
