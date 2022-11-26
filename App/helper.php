@@ -1,8 +1,12 @@
 <?php
-function view($file_name)
+function view($file_name, $arr = [])
 {
+    if (is_array($arr) && count($arr)) {
+        extract($arr);
+    }
     include_once($_SERVER['DOCUMENT_ROOT'] . "/resource/views/$file_name.php");
 }
+
 function request()
 {
     return (object) $_REQUEST;

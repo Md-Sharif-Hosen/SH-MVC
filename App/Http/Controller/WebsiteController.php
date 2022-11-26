@@ -2,6 +2,8 @@
 
 namespace App\Http\Controller;
 
+use App\Models\User;
+
 class WebsiteController
 {
     public function home()
@@ -10,7 +12,9 @@ class WebsiteController
     }
     public function about()
     {
-        return view('about');
+        $user = new User();
+        $data = $user->select('*')->get();
+        return view('about', ['data' => $data]);
     }
     public function contact()
     {

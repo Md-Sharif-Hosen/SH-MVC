@@ -19,7 +19,7 @@ class Model
         if (!$this->db) {
             die("connection failed:" . mysqli_connect_error());
         }
-        echo "connect successfully <br>";
+        // echo "connect successfully <br>";
         $this->table_name = $this->get_class_name();
     }
     public function get_class_name()
