@@ -3,11 +3,18 @@
 namespace App\Http\Controller;
 
 use App\Models\User;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 class WebsiteController
 {
     public function home()
     {
+        session()->put('user_name','admin');
+        session()->put('is_admin',false);
+        session()->put('last_time',date('h:i:s:a'));
+        session()->forget('user');
+
+        dd($_SESSION ,session()->get('user_name'));
         return view('home');
     }
     public function about()

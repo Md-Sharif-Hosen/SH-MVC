@@ -1,5 +1,6 @@
 <?php
 use Doctrine\Inflector\InflectorFactory;
+use App\Abstracts\Session;
 function view($file_name, $arr = [])
 {
     if (is_array($arr) && count($arr)) {
@@ -35,4 +36,7 @@ function inflector()
 {
     $inflector = InflectorFactory::create()->build();
     return $inflector;
+}
+function session(){
+    return new Session();
 }

@@ -29,6 +29,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact">contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Admin">Admin</a>
+                    </li>
+
 
 
 
