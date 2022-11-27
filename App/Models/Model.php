@@ -27,8 +27,12 @@ class Model
         $class_name = get_class($this);
         $class_name = explode("\\", $class_name);
         $class_name = $class_name[count($class_name) - 1];
-        $class_name = strtolower($class_name);
-        $class_name = $class_name . 's';
+        // $class_name = strtolower($class_name);
+        // $class_name = $class_name . 's';
+             //('ModelName'); // model_name
+             $class_name = inflector()->tableize($class_name);
+             // ('browser'); // browsers
+             $class_name = inflector()->pluralize($class_name);
         return $class_name;
     }
     public function __destruct()

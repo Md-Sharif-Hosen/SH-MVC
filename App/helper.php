@@ -1,4 +1,5 @@
 <?php
+use Doctrine\Inflector\InflectorFactory;
 function view($file_name, $arr = [])
 {
     if (is_array($arr) && count($arr)) {
@@ -29,4 +30,9 @@ function asset($file_name)
 function globalvar($variable)
 {
     return $GLOBALS[$variable];
+}
+function inflector()
+{
+    $inflector = InflectorFactory::create()->build();
+    return $inflector;
 }

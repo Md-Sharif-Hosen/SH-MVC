@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 class ContactController{
     public function contact_submit()
     {

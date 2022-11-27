@@ -2,6 +2,6 @@
 
 namespace App\Models;
 
-class Test extends Model
+class Comment extends Model
 {
 }
