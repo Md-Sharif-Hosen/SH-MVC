@@ -73,3 +73,4 @@ resource_include('Includes/header',['page_name'=>'home_page']);
 // include_once('./resource/views/Includes/footer.php');
 resource_include('Includes/footer');
 ?>
+<script src="<?= assets('JS/bootstrap.min.js') ?>"></script>

@@ -13,7 +13,10 @@ $app->GET('/user/profile_details',"WebsiteController@profile_details")->params('
 $app->GET('/contact',"WebsiteController@contact");
 $app->POST('/contact/submit',"ContactController@contact_submit");
 
-$app->GET('/login',"WebsiteController@login");
-$app->POST('/login/submit',"ContactController@login_submit");
+$app->get('/login','WebsiteController@login');
+$app->post('/login/submit','WebsiteController@login_submit');
+$app->get('/logout','Auth\AuthController@logout');
+
+
 $app->start();
 ?>

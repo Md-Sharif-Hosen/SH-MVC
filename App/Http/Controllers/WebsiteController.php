@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use App\Models\User;
 use Symfony\Component\VarDumper\Cloner\Data;
@@ -9,12 +9,7 @@ class WebsiteController
 {
     public function home()
     {
-        session()->put('user_name','admin');
-        session()->put('is_admin',false);
-        session()->put('last_time',date('h:i:s:a'));
-        session()->forget('user');
-
-        dd($_SESSION ,session()->get('user_name'));
+        
         return view('home');
     }
     public function about()
@@ -27,15 +22,27 @@ class WebsiteController
     {
         return view('contact');
     }
-    public function blog_details($id, $username)
-    {
-        echo "blog details";
-        //    dd($_REQUEST);
-        dd($id, $username);
-    }
+ 
     public function profile_details()
     {
         echo "profile details";
         dd($_REQUEST);
+    }
+
+    public function login()
+    {
+        return view('auth/login');
+    }
+
+    public function login_submit()
+    {
+        extract((array) request());
+        $check = auth()->login($email, $password);
+
+        if ($check) {
+            return redirect('/');
+        } else {
+            return back();
+        }
     }
 }

@@ -9,7 +9,7 @@ class UserSeeder
     {
         
         $user = new User();
-
+        $user->truncate();
         $user->insert([
             'name' => 'tarek',
             'email' => 'tarek@gmail.com',

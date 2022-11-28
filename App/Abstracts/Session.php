@@ -26,8 +26,17 @@ class Session
 
     public function forget($index)
     {
-        if (isset($_SESSION[$index])) {
+        if(isset($_SESSION[$index])){
             unset($_SESSION[$index]);
         }
+    }
+
+    public function old($index)
+    {
+        if(isset($_SESSION['old']->$index)){
+            return $_SESSION['old']->$index;
+        }
+        
+        return '';
     }
 }

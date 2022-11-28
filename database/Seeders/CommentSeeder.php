@@ -10,7 +10,7 @@ class CommentSeeder
     {
 
         $user = new Comment();
-
+        $user->truncate();
         $user->insert([
             'title' => 'tarek',
             'email' => 'tarek@gmail.com'

@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php echo $page_name; ?>
-    </title>
-    <link rel="stylesheet" href="<?= asset('CSS/bootstrap.min.css'); ?>">
+    <title><?= $page_name ?? '' ?></title>
+    <link rel="stylesheet" href="<?= assets('CSS/bootstrap.min.css') ?>">
+    
 </head>
 
 <body>
@@ -24,17 +23,24 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about">about</a>
+                        <a class="nav-link" href="/about">about</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact">contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Admin">Admin</a>
+                        <a class="nav-link" href="/contact">contact</a>
                     </li>
 
-
-
+                    <?php
+                    if (auth()->check()) {
+                    ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin">admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="return confirm('do you want to logout?')" href="/logout">logout</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
 
                 </ul>
                 <form class="d-flex">
@@ -44,8 +50,3 @@
             </div>
         </div>
     </nav>
-
-    <script src="<?php echo asset('JS/bootstrap.min.js') ?>"></script>
-</body>
-
-</html>
