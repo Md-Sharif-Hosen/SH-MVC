@@ -17,6 +17,10 @@ $app->get('/login','WebsiteController@login');
 $app->post('/login/submit','WebsiteController@login_submit');
 $app->get('/logout','Auth\AuthController@logout');
 
+$app->get('/admin','Admin\AdminController@admin');
+$app->get('/admin/blogs','Admin\AdminController@blog_list');
+$app->get('/admin/blog/create','Admin\AdminController@blog_create');
+$app->post('/admin/blog/create/store','Admin\AdminController@blog_create_store');
 
 $app->start();
 ?>

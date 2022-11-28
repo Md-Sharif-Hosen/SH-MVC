@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\User;
 use Symfony\Component\VarDumper\Cloner\Data;
 
@@ -9,8 +10,10 @@ class WebsiteController
 {
     public function home()
     {
-        
-        return view('home');
+        $blog = new Blog();
+        return view('home', [
+            'blogs' => $blog->select('*')->get()
+        ]);
     }
     public function about()
     {
@@ -22,7 +25,7 @@ class WebsiteController
     {
         return view('contact');
     }
- 
+
     public function profile_details()
     {
         echo "profile details";
